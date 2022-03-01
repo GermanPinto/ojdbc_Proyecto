@@ -24,8 +24,10 @@ public class CursoDAO {
 		//conexion a la base de datos y ejecucion de la sentencia
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		//Connection  conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","usuario_prueba","admin");
-		Connection  conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL","GERMAN","1234");
+		Connection  conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "GERMAN", "1234");
+
 		
+		System.out.println(conexion);
 		try(PreparedStatement stmt = conexion.prepareStatement(consultaSql)){
 	
 			ResultSet resultado = stmt.executeQuery();

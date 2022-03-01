@@ -22,8 +22,9 @@ public class FormaDePagoDAO {
 							+ " FROM forma_pago ";
 		
 		//conexion a la base de datos y ejecucion de la sentencia
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection  conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","usuario_prueba","admin");
+		//Class.forName("oracle.jdbc.driver.OracleDriver");
+		//Connection  conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","usuario_prueba","admin");
+		Connection  conexion = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","GERMAN","1234");
 		
 		try(PreparedStatement stmt = conexion.prepareStatement(consultaSql)){
 	
